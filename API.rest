@@ -1,0 +1,33 @@
+###
+@SERVER = http://localhost:8082
+
+### GET ALL grocery list
+GET {{SERVER}}/grocery
+
+
+### CREATE grocerylist item
+POST {{SERVER}}/grocery/create
+content-type: application/json
+
+{
+    "taskId" : "8",
+    "task" : "sing for voice",
+    "isComplete": true
+}
+
+
+### DELETE grocerylist item
+DELETE {{SERVER}}/grocery/delete/6
+
+
+
+### UPDATE grocerylist item
+PUT {{SERVER}}/grocery/update/99
+content-type: application/json
+
+{
+  "taskId" : 6,
+  "task" : "smoke weed everyday",
+  "isComplete" : true
+}
+
